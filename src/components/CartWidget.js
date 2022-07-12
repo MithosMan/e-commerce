@@ -1,7 +1,10 @@
-import carrito from "./img/carrito.png"
+import React from 'react';
+import carrito from "./img/carrito.png";
 
 function Widget (){
-    <img src={carrito}></img>
+  return (
+    <img src={carrito} className="col-2"></img>
+    );
   }
 
   export default Widget
