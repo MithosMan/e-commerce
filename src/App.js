@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
     <Navegacion />
-    <ListContainer />
+    <ListContainer texto={"Gorgona"}/>
     </div>
   );
 }
