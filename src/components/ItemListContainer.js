@@ -1,12 +1,12 @@
 import React from 'react';
 import Conteo from './ItemCount';
 
-let {propName: nombre}={propName: "Futuro listado de criaturas fantasticas"}; 
+
 
 function ListContainer (texto){
-
+  let {propName: nombre}={propName: texto}; 
   const onAdd = (valor) => {
-    console.log("Compraste "+valor+" unidades de "+texto)
+    console.log("Compraste "+valor+" unidades de "+nombre)
   }
 
   return (
