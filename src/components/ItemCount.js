@@ -14,7 +14,7 @@ export const Conteo = (stock,initial,onAdd) => {
   return (
       <div className='contador'>
           <button disabled={cuenta<=1} onClick={resta}>-</button>
-          <span>{cuenta}</span>
+          <span>{Cuenta}</span>
           <button disabled={cuenta>=stock} onClick={suma}>+</button>
           <div>
               <button disabled={stock<=0} onClick={()=>onAdd(cuenta)}>Agregar al carrito</button>
