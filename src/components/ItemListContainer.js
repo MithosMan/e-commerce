@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Conteo from './ItemCount';
 import ItemList from './ItemList';
-import React from 'react';
 import toro from "./img/toro-creta.jpg";
 import yegua from "./img/yeguas-diomedes.jpg";
 import jabali from "./img/jabali-erimanto.jpg";
@@ -12,19 +11,20 @@ const archivos = [
     {id: 3, imagen: jabali, titulo: "Jabalí de Erimanto"}
   ]
 
-let {propName: nombre}={propName: "Futuro listado de criaturas fantasticas"}; 
-
 function ListContainer (texto){
 
   const [data, setData] = useState([]);
 
-  useEffect (()=> {
-    const getData =new Promise(resolve => 
-      setTimeout(() => {resolve(archivos)},1000));
-  });
-  getData.then(respuesta => setData(respuesta))
+  useEffect (() => {
+    const getData =new Promise(resolve => {
+      setTimeout(() => {resolve(archivos);},2000);
+    });
+
+  },[])
+
+  let {propName: nombre}={propName: texto}; 
   const onAdd = (valor) => {
-    console.log("Compraste "+valor+" unidades de "+texto)
+    console.log("Compraste "+valor+" unidades de "+nombre)
   }
 
   return (

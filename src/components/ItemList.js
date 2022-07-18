@@ -5,7 +5,6 @@ import Item from './Item';
   
   return (
       data.map(archivos => <Item key={archivos.id} info={archivos}/>)
-      
     );
   }
 
