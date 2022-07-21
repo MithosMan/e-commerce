@@ -1,12 +1,13 @@
 import React from 'react';
 import Item from './Item';
 
-  const ItemList = (data =[]) => {
-  
+const ItemList = ({items}) => {
   return (
-      data.map(archivos => <Item key={archivos.id} info={archivos}/>)
-    );
-  }
+    <div className="itemList flex-wrap">
+        {items.map(item => <Item key={item.id} {...item}/>)}
+    </div>
+  )
+}
 
 
 export default ItemList
